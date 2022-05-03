@@ -1,14 +1,29 @@
 package javafx.javafx;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 
 public class MainController {
     @FXML
-    private Label welcomeText;
+    private MenuItem menuItemSeller;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private MenuItem menuItemDepartment;
+
+    @FXML
+    private MenuItem menuItemAbout;
+
+    public void onMenuItemSellerAction() {
+        System.out.println("Seller action");
+    }
+
+    public void onMenuItemDepartmentAction() {
+        System.out.println("Department Action");
+    }
+
+    public void onMenuItemAboutAction() {
+        System.out.println("About action");
     }
 }
