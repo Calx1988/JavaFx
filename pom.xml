@@ -64,7 +64,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>javafx.javafx/javafx.javafx.HelloApplication</mainClass>
+                            <mainClass>javafx.javafx/javafx.javafx.MainApplication</mainClass>
                         </configuration>
                     </execution>
                 </executions>
