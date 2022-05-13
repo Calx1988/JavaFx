@@ -2,6 +2,7 @@ package javafx.javafx.controllers;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -44,8 +45,10 @@ public class DepartmentListController implements Initializable {
     private ObservableList<Department> obsList;
 
     @FXML
-    public void onBtNewAction() {
-        System.out.println("onBtNewAction");
+    public void onBtNewAction(ActionEvent event) {
+        Stage parentStage = Utils.currentStage(event);
+        Department obj = new Department();
+        createDialogForm(obj, "/gui/DepartmentForm.fxml", parentStage);
     }
 
     @Override
@@ -74,10 +77,13 @@ public class DepartmentListController implements Initializable {
         this.service = service;
     }
 
-    private void createDialogForm(String absoluteName, Stage parentStage) {
+    private void createDialogForm(Department obj, String absoluteName, Stage parentStage) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
             Pane pane = loader.load();
+            DepartmentFormController controller = loader.getController();
+            controller.setDepartment(obj);
+            controller.updateFormData();
 
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Enter Department data");
