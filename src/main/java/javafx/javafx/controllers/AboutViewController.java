@@ -1,4 +1,4 @@
-package javafx.javafx;
+package javafx.javafx.controllers;
 
 public class AboutViewController {
 }
