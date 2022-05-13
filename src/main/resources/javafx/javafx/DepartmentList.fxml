@@ -8,7 +8,8 @@
 <?import javafx.scene.text.Font?>
 
 
-<VBox prefHeight="388.0" prefWidth="440.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1">
+<VBox prefHeight="388.0" prefWidth="440.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1"
+      fx:controller="javafx.javafx.controllers.DepartmentListController">
     <children>
         <Label text="Department Registration">
             <font>
