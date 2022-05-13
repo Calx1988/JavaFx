@@ -1,12 +1,10 @@
 package javafx.javafx;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
@@ -30,8 +28,9 @@ public class MainController implements Initializable {
     }
 
     public void onMenuItemDepartmentAction() {
-        System.out.println("Department Action");
+        loadView("DepartmentList.fxml");
     }
+
 
     public void onMenuItemAboutAction() throws IOException {
         loadView("AboutView.fxml");
